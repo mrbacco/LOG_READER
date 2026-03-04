@@ -23,7 +23,7 @@ from collections import Counter
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs
 
-from syslog_reader import LEVEL_HINTS, parse_datetime, parse_line, should_keep
+from syslog_reader import LOG_TYPE_CHOICES, LEVEL_HINTS, parse_datetime, parse_line, should_keep
 
 # Root folders used by the tiny template/static system.
 BASE_DIR = pathlib.Path(__file__).resolve().parent
@@ -102,6 +102,25 @@ def _parse_levels(level_text: str, errors: list[str]) -> set[str] | None:
     return chosen
 
 
+def _parse_types(type_text: str, errors: list[str]) -> set[str] | None:
+    # Parse comma-separated type list and validate against known parser outputs.
+    text = type_text.strip().lower()
+    if not text:
+        return None
+
+    chosen = {item.strip() for item in text.split(",") if item.strip()}
+    valid = set(LOG_TYPE_CHOICES)
+    invalid = sorted(chosen - valid)
+    if invalid:
+        errors.append(
+            "Invalid type(s): "
+            + ", ".join(invalid)
+            + ". Use: "
+            + ",".join(sorted(valid))
+        )
+    return chosen
+
+
 def _parse_optional_datetime(name: str, value: str, errors: list[str]) -> dt.datetime | None:
     # Parse optional datetime input fields and collect validation errors.
     text = value.strip()
@@ -130,6 +149,7 @@ def _render_page(
 
     contains = html.escape(form_values.get("contains", ""))
     level = html.escape(form_values.get("level", ""))
+    type_filter = html.escape(form_values.get("type", ""))
     since = html.escape(form_values.get("since", ""))
     until = html.escape(form_values.get("until", ""))
     loaded_file_name = html.escape(form_values.get("loaded_file_name", ""))
@@ -156,6 +176,7 @@ def _render_page(
             f"<p><strong>Processed lines:</strong> {int(stats.get('processed', 0)):,}</p>"
             f"<p><strong>Matched lines:</strong> {int(stats.get('matched', 0)):,}</p>"
             f"<p><strong>Level counts:</strong> {html.escape(level_counts)}</p>"
+            f"<p><strong>Type counts:</strong> {html.escape(str(stats.get('type_counts', 'none')))}</p>"
             f"{truncated}"
             "</div>"
         )
@@ -166,6 +187,7 @@ def _render_page(
             built.append(
                 "<tr>"
                 f"<td>{row['timestamp']}</td>"
+                f"<td>{row['type']}</td>"
                 f"<td>{row['host']}</td>"
                 f"<td>{row['tag']}</td>"
                 f"<td>{row['level']}</td>"
@@ -174,11 +196,12 @@ def _render_page(
             )
         row_html = "".join(built)
     else:
-        row_html = "<tr><td colspan='5'>No results yet.</td></tr>"
+        row_html = "<tr><td colspan='6'>No results yet.</td></tr>"
 
     context = {
         "contains": contains,
         "level": level,
+        "type_filter": type_filter,
         "since": since,
         "until": until,
         "loaded_file_name": loaded_file_name,
@@ -254,6 +277,7 @@ class SyslogWebHandler(BaseHTTPRequestHandler):
         form_values = {
             "contains": _first(form, "contains"),
             "level": _first(form, "level"),
+            "type": _first(form, "type"),
             "since": _first(form, "since"),
             "until": _first(form, "until"),
             "loaded_file_name": _first(form, "loaded_file_name"),
@@ -268,6 +292,7 @@ class SyslogWebHandler(BaseHTTPRequestHandler):
 
         # Parse and validate filters before scanning lines.
         allowed_levels = _parse_levels(form_values["level"], errors)
+        allowed_types = _parse_types(form_values["type"], errors)
         since = _parse_optional_datetime("since", form_values["since"], errors)
         until = _parse_optional_datetime("until", form_values["until"], errors)
         if since and until and since > until:
@@ -282,6 +307,7 @@ class SyslogWebHandler(BaseHTTPRequestHandler):
         matched = 0
         rows: list[dict[str, str]] = []
         level_counter = Counter()
+        type_counter = Counter()
         default_year = dt.datetime.now().year
 
         # Parse each non-empty line and apply all filters.
@@ -290,21 +316,39 @@ class SyslogWebHandler(BaseHTTPRequestHandler):
                 continue
             processed += 1
             entry = parse_line(line, default_year)
-            if not should_keep(entry, form_values["contains"], allowed_levels, since, until):
+            if not should_keep(entry, form_values["contains"], allowed_levels, allowed_types, since, until):
                 continue
 
             matched += 1
             level_counter[entry.level or "unknown"] += 1
+            type_counter[entry.log_type or "unknown"] += 1
 
             # Keep only the first MAX_ROWS lines in the table for browser performance.
             if len(rows) < MAX_ROWS:
+                flow_suffix = []
+                if entry.src_ip:
+                    flow_suffix.append(f"src={entry.src_ip}")
+                if entry.dst_ip:
+                    flow_suffix.append(f"dst={entry.dst_ip}")
+                if entry.protocol:
+                    flow_suffix.append(f"proto={entry.protocol}")
+                if entry.packets_count is not None:
+                    flow_suffix.append(f"packets={entry.packets_count}")
+                if entry.bytes_count is not None:
+                    flow_suffix.append(f"bytes={entry.bytes_count}")
+
+                message = entry.msg
+                if flow_suffix:
+                    message = f"{message} ({', '.join(flow_suffix)})"
+
                 rows.append(
                     {
                         "timestamp": html.escape(entry.ts.isoformat(sep=" ") if entry.ts else "N/A"),
+                        "type": html.escape(entry.log_type or "unknown"),
                         "host": html.escape(entry.host or "N/A"),
                         "tag": html.escape(entry.tag or "raw"),
                         "level": html.escape(entry.level or "unknown"),
-                        "message": html.escape(entry.msg),
+                        "message": html.escape(message),
                     }
                 )
 
@@ -314,6 +358,12 @@ class SyslogWebHandler(BaseHTTPRequestHandler):
         if not level_counts_text:
             level_counts_text = "none"
 
+        type_counts_text = ", ".join(
+            f"{name}={count}" for name, count in sorted(type_counter.items(), key=lambda x: (-x[1], x[0]))
+        )
+        if not type_counts_text:
+            type_counts_text = "none"
+
         stats = {
             "file_name": form_values["loaded_file_name"] or "pasted text",
             "processed": processed,
@@ -321,6 +371,7 @@ class SyslogWebHandler(BaseHTTPRequestHandler):
             "shown": len(rows),
             "truncated": matched > len(rows),
             "level_counts": level_counts_text,
+            "type_counts": type_counts_text,
         }
         LOGGER.info(
             "Analysis complete file=%s processed=%s matched=%s shown=%s",

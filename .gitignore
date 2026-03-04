@@ -14,3 +14,4 @@ venv/
 *.log
 !BAC_LOG.log
 !sample_syslog.log
+!INDUSTRY_LOGS.log

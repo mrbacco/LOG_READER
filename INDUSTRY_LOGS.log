@@ -1,0 +1,20 @@
+﻿Mar 04 12:10:12 edge-fw-01 sshd[1201]: Failed password for invalid user admin from 45.67.12.10 port 511 ssh2
+<34>1 2026-03-04T12:10:20Z core-rtr-01 route-engine 444 ID47 - Interface ge-0/0/1 changed state to up
+Mar 04 12:10:25 secmon CEF:0|Cisco|Firepower|7.2|1001|Intrusion Event|8|src=10.10.1.5 dst=172.16.1.9 spt=443 dpt=5151 proto=TCP rt=2026-03-04T12:10:25Z bytesIn=12345 cnt=18
+Mar 04 12:10:30 qradar LEEF:2.0|IBM|QRadar|7.5|QID-2001|src=192.168.1.21	dst=10.20.1.44	sev=7	proto=UDP	bytes=4096	packets=12	devTime=2026-03-04T12:10:30Z
+203.0.113.1 - - [04/Mar/2026:12:10:35 +0000] "GET /api/v1/health HTTP/1.1" 200 532 "-" "curl/8.5"
+{"@timestamp":"2026-03-04T12:10:40Z","host":"siem-node-1","service":"suricata","level":"warning","message":"flow anomaly detected","src":"10.1.1.8","dst":"172.31.1.44"}
+{"timestamp":"2026-03-04T12:10:45Z","type":"netflow","device":"flow-exporter-1","src":"10.40.1.5","dst":"10.99.1.30","protocol":6,"packets":42,"bytes":12048}
+ts=2026-03-04T12:10:50Z type=netflow exporter=nprobe-1 src=192.0.2.11 dst=198.51.100.21 proto=UDP packets=20 bytes=9000
+flowStartMilliseconds=1772628775000 sourceIPv4Address=10.55.1.10 destinationIPv4Address=10.99.1.55 protocolIdentifier=6 packetDeltaCount=60 octetDeltaCount=24000 exporter=ipfix-1
+2026-03-04 12:10:59 10.70.1.1:443 -> 10.80.1.9:51822 TCP packets=30 bytes=15000
+Mar 04 12:11:12 edge-fw-02 sshd[1202]: Accepted publickey for ops from 45.67.12.11 port 512 ssh2
+<30>1 2026-03-04T12:11:20Z core-rtr-02 route-engine 445 ID48 - BGP peer 10.0.0.2 established
+Mar 04 12:11:25 secmon CEF:0|PaloAlto|PAN-OS|11.0|2002|Traffic Allow|5|src=10.10.2.6 dst=172.16.2.10 spt=51514 dpt=443 proto=TCP rt=2026-03-04T12:11:25Z bytesIn=8421 cnt=11
+Mar 04 12:11:30 qradar LEEF:2.0|IBM|QRadar|7.5|QID-2002|src=192.168.2.22	dst=10.20.2.45	sev=4	proto=TCP	bytes=8192	packets=16	devTime=2026-03-04T12:11:30Z
+198.51.100.2 - - [04/Mar/2026:12:11:35 +0000] "POST /login HTTP/1.1" 401 922 "-" "Mozilla/5.0"
+{"@timestamp":"2026-03-04T12:11:40Z","host":"siem-node-2","service":"wazuh","severity":"error","message":"agent disconnected","src":"10.2.2.8","dst":"172.32.2.44"}
+{"timestamp":"2026-03-04T12:11:45Z","type":"ipfix","device":"collector-2","sourceIPv4Address":"10.50.2.5","destinationIPv4Address":"10.60.2.30","protocolIdentifier":17,"packetDeltaCount":62,"octetDeltaCount":25048}
+ts=2026-03-04T12:11:50Z type=ipflow exporter=softflowd-2 src=192.0.2.12 dst=198.51.100.22 proto=TCP packets=28 bytes=11000
+flowStartMilliseconds=1772628835000 sourceIPv4Address=10.55.2.10 destinationIPv4Address=10.99.2.55 protocolIdentifier=17 packetDeltaCount=66 octetDeltaCount=26000 exporter=ipfix-2
+2026-03-04 12:11:59 10.70.2.1:53 -> 10.80.2.9:60211 UDP packets=40 bytes=17000

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Offline Syslog Reader</title>
+  <title>BAC_LOG PARSER</title>
   <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
   <div class="wrap">
     <div class="card">
-      <h1>Offline Syslog Reader</h1>
+      <h1>BAC_LOG PARSER</h1>
       <p class="muted">Load a local file in your browser, then filter and inspect lines offline.</p>
       <form method="post" action="/">
         <div class="row">
@@ -21,6 +21,14 @@
           </label>
           <label>Levels (comma-separated)
             <input type="text" name="level" value="{{level}}" placeholder="err,warning,info">
+          </label>
+          <label>Types (comma-separated)
+            <input
+              type="text"
+              name="type"
+              value="{{type_filter}}"
+              placeholder="netflow,ipfix,cef,leef,access,json,syslog-rfc3164,syslog-rfc5424"
+            >
           </label>
         </div>
         <div class="row">
@@ -46,6 +54,7 @@
         <thead>
           <tr>
             <th>Timestamp</th>
+            <th>Type</th>
             <th>Host</th>
             <th>Tag</th>
             <th>Level</th>
