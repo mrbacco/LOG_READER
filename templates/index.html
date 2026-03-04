@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offline Syslog Reader</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Offline Syslog Reader</h1>
+      <p class="muted">Load a local file in your browser, then filter and inspect lines offline.</p>
+      <form method="post" action="/">
+        <div class="row">
+          <label>Syslog file
+            <input id="log_file" type="file" accept=".log,.txt,text/plain">
+          </label>
+          <label>Contains text
+            <input type="text" name="contains" value="{{contains}}" placeholder="ssh, kernel, failed...">
+          </label>
+          <label>Levels (comma-separated)
+            <input type="text" name="level" value="{{level}}" placeholder="err,warning,info">
+          </label>
+        </div>
+        <div class="row">
+          <label>Since
+            <input type="text" name="since" value="{{since}}" placeholder="2026-03-04 10:00:00">
+          </label>
+          <label>Until
+            <input type="text" name="until" value="{{until}}" placeholder="2026-03-04 12:00:00">
+          </label>
+          <label>Loaded filename
+            <input id="loaded_file_name" type="text" name="loaded_file_name" value="{{loaded_file_name}}" readonly>
+          </label>
+        </div>
+        <label>Log content
+          <textarea id="log_text" name="log_text" placeholder="File content will appear here...">{{log_text}}</textarea>
+        </label>
+        <p id="file_status" class="muted">{{file_status}}</p>
+        <button type="submit">Analyze</button>
+      </form>
+      {{error_html}}
+      {{stats_html}}
+      <table>
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Host</th>
+            <th>Tag</th>
+            <th>Level</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{row_html}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById("log_file");
+    const logText = document.getElementById("log_text");
+    const loadedFileName = document.getElementById("loaded_file_name");
+    const fileStatus = document.getElementById("file_status");
+
+    fileInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (!file) {
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = () => {
+        const text = typeof reader.result === "string" ? reader.result : "";
+        logText.value = text;
+        loadedFileName.value = file.name;
+        const kb = (file.size / 1024).toFixed(1);
+        fileStatus.textContent = `Loaded ${file.name} (${kb} KB).`;
+      };
+      reader.onerror = () => {
+        fileStatus.textContent = "Could not read that file in the browser.";
+      };
+      reader.readAsText(file);
+    });
+  </script>
+</body>
+</html>

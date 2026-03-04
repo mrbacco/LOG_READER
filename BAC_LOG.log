@@ -1,0 +1,480 @@
+﻿Mar 04 08:00:00 gw01 sshd[221]: BAC_LOG event-1: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 08:00:37 app01 kernel: BAC_LOG event-2: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 08:01:14 db01 systemd[1]: BAC_LOG event-3: warning: CPU temperature high on core 3
+Mar 04 08:01:51 vpn01 nginx[842]: BAC_LOG event-4: error: disk sda latency exceeded threshold
+Mar 04 08:02:28 node02 postgres[1123]: BAC_LOG event-5: Started Daily Cleanup job
+Mar 04 08:03:05 gw01 cron[88]: BAC_LOG event-6: notice: rotated /var/log/syslog
+Mar 04 08:03:42 app01 BAC_LOG[501]: BAC_LOG event-7: debug: connection pool heartbeat OK
+Mar 04 08:04:19 db01 sshd[221]: BAC_LOG event-8: critical: database replication lag reached 12s
+Mar 04 08:04:56 vpn01 kernel: BAC_LOG event-9: info: backup completed successfully
+Mar 04 08:05:33 node02 systemd[1]: BAC_LOG event-10: alert: unusual login volume detected
+Mar 04 08:06:10 gw01 nginx[842]: BAC_LOG event-11: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 08:06:47 app01 postgres[1123]: BAC_LOG event-12: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 08:07:24 db01 cron[88]: BAC_LOG event-13: warning: CPU temperature high on core 3
+Mar 04 08:08:01 vpn01 BAC_LOG[501]: BAC_LOG event-14: error: disk sda latency exceeded threshold
+Mar 04 08:08:38 node02 sshd[221]: BAC_LOG event-15: Started Daily Cleanup job
+Mar 04 08:09:15 gw01 kernel: BAC_LOG event-16: notice: rotated /var/log/syslog
+Mar 04 08:09:52 app01 systemd[1]: BAC_LOG event-17: debug: connection pool heartbeat OK
+Mar 04 08:10:29 db01 nginx[842]: BAC_LOG event-18: critical: database replication lag reached 12s
+Mar 04 08:11:06 vpn01 postgres[1123]: BAC_LOG event-19: info: backup completed successfully
+Mar 04 08:11:43 node02 cron[88]: BAC_LOG event-20: alert: unusual login volume detected
+Mar 04 08:12:20 gw01 BAC_LOG[501]: BAC_LOG event-21: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 08:12:57 app01 sshd[221]: BAC_LOG event-22: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 08:13:34 db01 kernel: BAC_LOG event-23: warning: CPU temperature high on core 3
+Mar 04 08:14:11 vpn01 systemd[1]: BAC_LOG event-24: error: disk sda latency exceeded threshold
+Mar 04 08:14:48 node02 nginx[842]: BAC_LOG event-25: Started Daily Cleanup job
+Mar 04 08:15:25 gw01 postgres[1123]: BAC_LOG event-26: notice: rotated /var/log/syslog
+Mar 04 08:16:02 app01 cron[88]: BAC_LOG event-27: debug: connection pool heartbeat OK
+Mar 04 08:16:39 db01 BAC_LOG[501]: BAC_LOG event-28: critical: database replication lag reached 12s
+Mar 04 08:17:16 vpn01 sshd[221]: BAC_LOG event-29: info: backup completed successfully
+Mar 04 08:17:53 node02 kernel: BAC_LOG event-30: alert: unusual login volume detected
+Mar 04 08:18:30 gw01 systemd[1]: BAC_LOG event-31: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 08:19:07 app01 nginx[842]: BAC_LOG event-32: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 08:19:44 db01 postgres[1123]: BAC_LOG event-33: warning: CPU temperature high on core 3
+Mar 04 08:20:21 vpn01 cron[88]: BAC_LOG event-34: error: disk sda latency exceeded threshold
+Mar 04 08:20:58 node02 BAC_LOG[501]: BAC_LOG event-35: Started Daily Cleanup job
+Mar 04 08:21:35 gw01 sshd[221]: BAC_LOG event-36: notice: rotated /var/log/syslog
+Mar 04 08:22:12 app01 kernel: BAC_LOG event-37: debug: connection pool heartbeat OK
+Mar 04 08:22:49 db01 systemd[1]: BAC_LOG event-38: critical: database replication lag reached 12s
+Mar 04 08:23:26 vpn01 nginx[842]: BAC_LOG event-39: info: backup completed successfully
+Mar 04 08:24:03 node02 postgres[1123]: BAC_LOG event-40: alert: unusual login volume detected
+Mar 04 08:24:40 gw01 cron[88]: BAC_LOG event-41: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 08:25:17 app01 BAC_LOG[501]: BAC_LOG event-42: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 08:25:54 db01 sshd[221]: BAC_LOG event-43: warning: CPU temperature high on core 3
+Mar 04 08:26:31 vpn01 kernel: BAC_LOG event-44: error: disk sda latency exceeded threshold
+Mar 04 08:27:08 node02 systemd[1]: BAC_LOG event-45: Started Daily Cleanup job
+Mar 04 08:27:45 gw01 nginx[842]: BAC_LOG event-46: notice: rotated /var/log/syslog
+Mar 04 08:28:22 app01 postgres[1123]: BAC_LOG event-47: debug: connection pool heartbeat OK
+Mar 04 08:28:59 db01 cron[88]: BAC_LOG event-48: critical: database replication lag reached 12s
+Mar 04 08:29:36 vpn01 BAC_LOG[501]: BAC_LOG event-49: info: backup completed successfully
+Mar 04 08:30:13 node02 sshd[221]: BAC_LOG event-50: alert: unusual login volume detected
+Mar 04 08:30:50 gw01 kernel: BAC_LOG event-51: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 08:31:27 app01 systemd[1]: BAC_LOG event-52: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 08:32:04 db01 nginx[842]: BAC_LOG event-53: warning: CPU temperature high on core 3
+Mar 04 08:32:41 vpn01 postgres[1123]: BAC_LOG event-54: error: disk sda latency exceeded threshold
+Mar 04 08:33:18 node02 cron[88]: BAC_LOG event-55: Started Daily Cleanup job
+Mar 04 08:33:55 gw01 BAC_LOG[501]: BAC_LOG event-56: notice: rotated /var/log/syslog
+Mar 04 08:34:32 app01 sshd[221]: BAC_LOG event-57: debug: connection pool heartbeat OK
+Mar 04 08:35:09 db01 kernel: BAC_LOG event-58: critical: database replication lag reached 12s
+Mar 04 08:35:46 vpn01 systemd[1]: BAC_LOG event-59: info: backup completed successfully
+Mar 04 08:36:23 node02 nginx[842]: BAC_LOG event-60: alert: unusual login volume detected
+Mar 04 08:37:00 gw01 postgres[1123]: BAC_LOG event-61: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 08:37:37 app01 cron[88]: BAC_LOG event-62: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 08:38:14 db01 BAC_LOG[501]: BAC_LOG event-63: warning: CPU temperature high on core 3
+Mar 04 08:38:51 vpn01 sshd[221]: BAC_LOG event-64: error: disk sda latency exceeded threshold
+Mar 04 08:39:28 node02 kernel: BAC_LOG event-65: Started Daily Cleanup job
+Mar 04 08:40:05 gw01 systemd[1]: BAC_LOG event-66: notice: rotated /var/log/syslog
+Mar 04 08:40:42 app01 nginx[842]: BAC_LOG event-67: debug: connection pool heartbeat OK
+Mar 04 08:41:19 db01 postgres[1123]: BAC_LOG event-68: critical: database replication lag reached 12s
+Mar 04 08:41:56 vpn01 cron[88]: BAC_LOG event-69: info: backup completed successfully
+Mar 04 08:42:33 node02 BAC_LOG[501]: BAC_LOG event-70: alert: unusual login volume detected
+Mar 04 08:43:10 gw01 sshd[221]: BAC_LOG event-71: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 08:43:47 app01 kernel: BAC_LOG event-72: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 08:44:24 db01 systemd[1]: BAC_LOG event-73: warning: CPU temperature high on core 3
+Mar 04 08:45:01 vpn01 nginx[842]: BAC_LOG event-74: error: disk sda latency exceeded threshold
+Mar 04 08:45:38 node02 postgres[1123]: BAC_LOG event-75: Started Daily Cleanup job
+Mar 04 08:46:15 gw01 cron[88]: BAC_LOG event-76: notice: rotated /var/log/syslog
+Mar 04 08:46:52 app01 BAC_LOG[501]: BAC_LOG event-77: debug: connection pool heartbeat OK
+Mar 04 08:47:29 db01 sshd[221]: BAC_LOG event-78: critical: database replication lag reached 12s
+Mar 04 08:48:06 vpn01 kernel: BAC_LOG event-79: info: backup completed successfully
+Mar 04 08:48:43 node02 systemd[1]: BAC_LOG event-80: alert: unusual login volume detected
+Mar 04 08:49:20 gw01 nginx[842]: BAC_LOG event-81: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 08:49:57 app01 postgres[1123]: BAC_LOG event-82: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 08:50:34 db01 cron[88]: BAC_LOG event-83: warning: CPU temperature high on core 3
+Mar 04 08:51:11 vpn01 BAC_LOG[501]: BAC_LOG event-84: error: disk sda latency exceeded threshold
+Mar 04 08:51:48 node02 sshd[221]: BAC_LOG event-85: Started Daily Cleanup job
+Mar 04 08:52:25 gw01 kernel: BAC_LOG event-86: notice: rotated /var/log/syslog
+Mar 04 08:53:02 app01 systemd[1]: BAC_LOG event-87: debug: connection pool heartbeat OK
+Mar 04 08:53:39 db01 nginx[842]: BAC_LOG event-88: critical: database replication lag reached 12s
+Mar 04 08:54:16 vpn01 postgres[1123]: BAC_LOG event-89: info: backup completed successfully
+Mar 04 08:54:53 node02 cron[88]: BAC_LOG event-90: alert: unusual login volume detected
+Mar 04 08:55:30 gw01 BAC_LOG[501]: BAC_LOG event-91: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 08:56:07 app01 sshd[221]: BAC_LOG event-92: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 08:56:44 db01 kernel: BAC_LOG event-93: warning: CPU temperature high on core 3
+Mar 04 08:57:21 vpn01 systemd[1]: BAC_LOG event-94: error: disk sda latency exceeded threshold
+Mar 04 08:57:58 node02 nginx[842]: BAC_LOG event-95: Started Daily Cleanup job
+Mar 04 08:58:35 gw01 postgres[1123]: BAC_LOG event-96: notice: rotated /var/log/syslog
+Mar 04 08:59:12 app01 cron[88]: BAC_LOG event-97: debug: connection pool heartbeat OK
+Mar 04 08:59:49 db01 BAC_LOG[501]: BAC_LOG event-98: critical: database replication lag reached 12s
+Mar 04 09:00:26 vpn01 sshd[221]: BAC_LOG event-99: info: backup completed successfully
+Mar 04 09:01:03 node02 kernel: BAC_LOG event-100: alert: unusual login volume detected
+Mar 04 09:01:40 gw01 systemd[1]: BAC_LOG event-101: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 09:02:17 app01 nginx[842]: BAC_LOG event-102: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 09:02:54 db01 postgres[1123]: BAC_LOG event-103: warning: CPU temperature high on core 3
+Mar 04 09:03:31 vpn01 cron[88]: BAC_LOG event-104: error: disk sda latency exceeded threshold
+Mar 04 09:04:08 node02 BAC_LOG[501]: BAC_LOG event-105: Started Daily Cleanup job
+Mar 04 09:04:45 gw01 sshd[221]: BAC_LOG event-106: notice: rotated /var/log/syslog
+Mar 04 09:05:22 app01 kernel: BAC_LOG event-107: debug: connection pool heartbeat OK
+Mar 04 09:05:59 db01 systemd[1]: BAC_LOG event-108: critical: database replication lag reached 12s
+Mar 04 09:06:36 vpn01 nginx[842]: BAC_LOG event-109: info: backup completed successfully
+Mar 04 09:07:13 node02 postgres[1123]: BAC_LOG event-110: alert: unusual login volume detected
+Mar 04 09:07:50 gw01 cron[88]: BAC_LOG event-111: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 09:08:27 app01 BAC_LOG[501]: BAC_LOG event-112: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 09:09:04 db01 sshd[221]: BAC_LOG event-113: warning: CPU temperature high on core 3
+Mar 04 09:09:41 vpn01 kernel: BAC_LOG event-114: error: disk sda latency exceeded threshold
+Mar 04 09:10:18 node02 systemd[1]: BAC_LOG event-115: Started Daily Cleanup job
+Mar 04 09:10:55 gw01 nginx[842]: BAC_LOG event-116: notice: rotated /var/log/syslog
+Mar 04 09:11:32 app01 postgres[1123]: BAC_LOG event-117: debug: connection pool heartbeat OK
+Mar 04 09:12:09 db01 cron[88]: BAC_LOG event-118: critical: database replication lag reached 12s
+Mar 04 09:12:46 vpn01 BAC_LOG[501]: BAC_LOG event-119: info: backup completed successfully
+Mar 04 09:13:23 node02 sshd[221]: BAC_LOG event-120: alert: unusual login volume detected
+Mar 04 09:14:00 gw01 kernel: BAC_LOG event-121: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 09:14:37 app01 systemd[1]: BAC_LOG event-122: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 09:15:14 db01 nginx[842]: BAC_LOG event-123: warning: CPU temperature high on core 3
+Mar 04 09:15:51 vpn01 postgres[1123]: BAC_LOG event-124: error: disk sda latency exceeded threshold
+Mar 04 09:16:28 node02 cron[88]: BAC_LOG event-125: Started Daily Cleanup job
+Mar 04 09:17:05 gw01 BAC_LOG[501]: BAC_LOG event-126: notice: rotated /var/log/syslog
+Mar 04 09:17:42 app01 sshd[221]: BAC_LOG event-127: debug: connection pool heartbeat OK
+Mar 04 09:18:19 db01 kernel: BAC_LOG event-128: critical: database replication lag reached 12s
+Mar 04 09:18:56 vpn01 systemd[1]: BAC_LOG event-129: info: backup completed successfully
+Mar 04 09:19:33 node02 nginx[842]: BAC_LOG event-130: alert: unusual login volume detected
+Mar 04 09:20:10 gw01 postgres[1123]: BAC_LOG event-131: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 09:20:47 app01 cron[88]: BAC_LOG event-132: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 09:21:24 db01 BAC_LOG[501]: BAC_LOG event-133: warning: CPU temperature high on core 3
+Mar 04 09:22:01 vpn01 sshd[221]: BAC_LOG event-134: error: disk sda latency exceeded threshold
+Mar 04 09:22:38 node02 kernel: BAC_LOG event-135: Started Daily Cleanup job
+Mar 04 09:23:15 gw01 systemd[1]: BAC_LOG event-136: notice: rotated /var/log/syslog
+Mar 04 09:23:52 app01 nginx[842]: BAC_LOG event-137: debug: connection pool heartbeat OK
+Mar 04 09:24:29 db01 postgres[1123]: BAC_LOG event-138: critical: database replication lag reached 12s
+Mar 04 09:25:06 vpn01 cron[88]: BAC_LOG event-139: info: backup completed successfully
+Mar 04 09:25:43 node02 BAC_LOG[501]: BAC_LOG event-140: alert: unusual login volume detected
+Mar 04 09:26:20 gw01 sshd[221]: BAC_LOG event-141: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 09:26:57 app01 kernel: BAC_LOG event-142: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 09:27:34 db01 systemd[1]: BAC_LOG event-143: warning: CPU temperature high on core 3
+Mar 04 09:28:11 vpn01 nginx[842]: BAC_LOG event-144: error: disk sda latency exceeded threshold
+Mar 04 09:28:48 node02 postgres[1123]: BAC_LOG event-145: Started Daily Cleanup job
+Mar 04 09:29:25 gw01 cron[88]: BAC_LOG event-146: notice: rotated /var/log/syslog
+Mar 04 09:30:02 app01 BAC_LOG[501]: BAC_LOG event-147: debug: connection pool heartbeat OK
+Mar 04 09:30:39 db01 sshd[221]: BAC_LOG event-148: critical: database replication lag reached 12s
+Mar 04 09:31:16 vpn01 kernel: BAC_LOG event-149: info: backup completed successfully
+Mar 04 09:31:53 node02 systemd[1]: BAC_LOG event-150: alert: unusual login volume detected
+Mar 04 09:32:30 gw01 nginx[842]: BAC_LOG event-151: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 09:33:07 app01 postgres[1123]: BAC_LOG event-152: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 09:33:44 db01 cron[88]: BAC_LOG event-153: warning: CPU temperature high on core 3
+Mar 04 09:34:21 vpn01 BAC_LOG[501]: BAC_LOG event-154: error: disk sda latency exceeded threshold
+Mar 04 09:34:58 node02 sshd[221]: BAC_LOG event-155: Started Daily Cleanup job
+Mar 04 09:35:35 gw01 kernel: BAC_LOG event-156: notice: rotated /var/log/syslog
+Mar 04 09:36:12 app01 systemd[1]: BAC_LOG event-157: debug: connection pool heartbeat OK
+Mar 04 09:36:49 db01 nginx[842]: BAC_LOG event-158: critical: database replication lag reached 12s
+Mar 04 09:37:26 vpn01 postgres[1123]: BAC_LOG event-159: info: backup completed successfully
+Mar 04 09:38:03 node02 cron[88]: BAC_LOG event-160: alert: unusual login volume detected
+Mar 04 09:38:40 gw01 BAC_LOG[501]: BAC_LOG event-161: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 09:39:17 app01 sshd[221]: BAC_LOG event-162: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 09:39:54 db01 kernel: BAC_LOG event-163: warning: CPU temperature high on core 3
+Mar 04 09:40:31 vpn01 systemd[1]: BAC_LOG event-164: error: disk sda latency exceeded threshold
+Mar 04 09:41:08 node02 nginx[842]: BAC_LOG event-165: Started Daily Cleanup job
+Mar 04 09:41:45 gw01 postgres[1123]: BAC_LOG event-166: notice: rotated /var/log/syslog
+Mar 04 09:42:22 app01 cron[88]: BAC_LOG event-167: debug: connection pool heartbeat OK
+Mar 04 09:42:59 db01 BAC_LOG[501]: BAC_LOG event-168: critical: database replication lag reached 12s
+Mar 04 09:43:36 vpn01 sshd[221]: BAC_LOG event-169: info: backup completed successfully
+Mar 04 09:44:13 node02 kernel: BAC_LOG event-170: alert: unusual login volume detected
+Mar 04 09:44:50 gw01 systemd[1]: BAC_LOG event-171: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 09:45:27 app01 nginx[842]: BAC_LOG event-172: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 09:46:04 db01 postgres[1123]: BAC_LOG event-173: warning: CPU temperature high on core 3
+Mar 04 09:46:41 vpn01 cron[88]: BAC_LOG event-174: error: disk sda latency exceeded threshold
+Mar 04 09:47:18 node02 BAC_LOG[501]: BAC_LOG event-175: Started Daily Cleanup job
+Mar 04 09:47:55 gw01 sshd[221]: BAC_LOG event-176: notice: rotated /var/log/syslog
+Mar 04 09:48:32 app01 kernel: BAC_LOG event-177: debug: connection pool heartbeat OK
+Mar 04 09:49:09 db01 systemd[1]: BAC_LOG event-178: critical: database replication lag reached 12s
+Mar 04 09:49:46 vpn01 nginx[842]: BAC_LOG event-179: info: backup completed successfully
+Mar 04 09:50:23 node02 postgres[1123]: BAC_LOG event-180: alert: unusual login volume detected
+Mar 04 09:51:00 gw01 cron[88]: BAC_LOG event-181: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 09:51:37 app01 BAC_LOG[501]: BAC_LOG event-182: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 09:52:14 db01 sshd[221]: BAC_LOG event-183: warning: CPU temperature high on core 3
+Mar 04 09:52:51 vpn01 kernel: BAC_LOG event-184: error: disk sda latency exceeded threshold
+Mar 04 09:53:28 node02 systemd[1]: BAC_LOG event-185: Started Daily Cleanup job
+Mar 04 09:54:05 gw01 nginx[842]: BAC_LOG event-186: notice: rotated /var/log/syslog
+Mar 04 09:54:42 app01 postgres[1123]: BAC_LOG event-187: debug: connection pool heartbeat OK
+Mar 04 09:55:19 db01 cron[88]: BAC_LOG event-188: critical: database replication lag reached 12s
+Mar 04 09:55:56 vpn01 BAC_LOG[501]: BAC_LOG event-189: info: backup completed successfully
+Mar 04 09:56:33 node02 sshd[221]: BAC_LOG event-190: alert: unusual login volume detected
+Mar 04 09:57:10 gw01 kernel: BAC_LOG event-191: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 09:57:47 app01 systemd[1]: BAC_LOG event-192: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 09:58:24 db01 nginx[842]: BAC_LOG event-193: warning: CPU temperature high on core 3
+Mar 04 09:59:01 vpn01 postgres[1123]: BAC_LOG event-194: error: disk sda latency exceeded threshold
+Mar 04 09:59:38 node02 cron[88]: BAC_LOG event-195: Started Daily Cleanup job
+Mar 04 10:00:15 gw01 BAC_LOG[501]: BAC_LOG event-196: notice: rotated /var/log/syslog
+Mar 04 10:00:52 app01 sshd[221]: BAC_LOG event-197: debug: connection pool heartbeat OK
+Mar 04 10:01:29 db01 kernel: BAC_LOG event-198: critical: database replication lag reached 12s
+Mar 04 10:02:06 vpn01 systemd[1]: BAC_LOG event-199: info: backup completed successfully
+Mar 04 10:02:43 node02 nginx[842]: BAC_LOG event-200: alert: unusual login volume detected
+Mar 04 10:03:20 gw01 postgres[1123]: BAC_LOG event-201: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 10:03:57 app01 cron[88]: BAC_LOG event-202: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 10:04:34 db01 BAC_LOG[501]: BAC_LOG event-203: warning: CPU temperature high on core 3
+Mar 04 10:05:11 vpn01 sshd[221]: BAC_LOG event-204: error: disk sda latency exceeded threshold
+Mar 04 10:05:48 node02 kernel: BAC_LOG event-205: Started Daily Cleanup job
+Mar 04 10:06:25 gw01 systemd[1]: BAC_LOG event-206: notice: rotated /var/log/syslog
+Mar 04 10:07:02 app01 nginx[842]: BAC_LOG event-207: debug: connection pool heartbeat OK
+Mar 04 10:07:39 db01 postgres[1123]: BAC_LOG event-208: critical: database replication lag reached 12s
+Mar 04 10:08:16 vpn01 cron[88]: BAC_LOG event-209: info: backup completed successfully
+Mar 04 10:08:53 node02 BAC_LOG[501]: BAC_LOG event-210: alert: unusual login volume detected
+Mar 04 10:09:30 gw01 sshd[221]: BAC_LOG event-211: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 10:10:07 app01 kernel: BAC_LOG event-212: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 10:10:44 db01 systemd[1]: BAC_LOG event-213: warning: CPU temperature high on core 3
+Mar 04 10:11:21 vpn01 nginx[842]: BAC_LOG event-214: error: disk sda latency exceeded threshold
+Mar 04 10:11:58 node02 postgres[1123]: BAC_LOG event-215: Started Daily Cleanup job
+Mar 04 10:12:35 gw01 cron[88]: BAC_LOG event-216: notice: rotated /var/log/syslog
+Mar 04 10:13:12 app01 BAC_LOG[501]: BAC_LOG event-217: debug: connection pool heartbeat OK
+Mar 04 10:13:49 db01 sshd[221]: BAC_LOG event-218: critical: database replication lag reached 12s
+Mar 04 10:14:26 vpn01 kernel: BAC_LOG event-219: info: backup completed successfully
+Mar 04 10:15:03 node02 systemd[1]: BAC_LOG event-220: alert: unusual login volume detected
+Mar 04 10:15:40 gw01 nginx[842]: BAC_LOG event-221: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 10:16:17 app01 postgres[1123]: BAC_LOG event-222: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 10:16:54 db01 cron[88]: BAC_LOG event-223: warning: CPU temperature high on core 3
+Mar 04 10:17:31 vpn01 BAC_LOG[501]: BAC_LOG event-224: error: disk sda latency exceeded threshold
+Mar 04 10:18:08 node02 sshd[221]: BAC_LOG event-225: Started Daily Cleanup job
+Mar 04 10:18:45 gw01 kernel: BAC_LOG event-226: notice: rotated /var/log/syslog
+Mar 04 10:19:22 app01 systemd[1]: BAC_LOG event-227: debug: connection pool heartbeat OK
+Mar 04 10:19:59 db01 nginx[842]: BAC_LOG event-228: critical: database replication lag reached 12s
+Mar 04 10:20:36 vpn01 postgres[1123]: BAC_LOG event-229: info: backup completed successfully
+Mar 04 10:21:13 node02 cron[88]: BAC_LOG event-230: alert: unusual login volume detected
+Mar 04 10:21:50 gw01 BAC_LOG[501]: BAC_LOG event-231: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 10:22:27 app01 sshd[221]: BAC_LOG event-232: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 10:23:04 db01 kernel: BAC_LOG event-233: warning: CPU temperature high on core 3
+Mar 04 10:23:41 vpn01 systemd[1]: BAC_LOG event-234: error: disk sda latency exceeded threshold
+Mar 04 10:24:18 node02 nginx[842]: BAC_LOG event-235: Started Daily Cleanup job
+Mar 04 10:24:55 gw01 postgres[1123]: BAC_LOG event-236: notice: rotated /var/log/syslog
+Mar 04 10:25:32 app01 cron[88]: BAC_LOG event-237: debug: connection pool heartbeat OK
+Mar 04 10:26:09 db01 BAC_LOG[501]: BAC_LOG event-238: critical: database replication lag reached 12s
+Mar 04 10:26:46 vpn01 sshd[221]: BAC_LOG event-239: info: backup completed successfully
+Mar 04 10:27:23 node02 kernel: BAC_LOG event-240: alert: unusual login volume detected
+Mar 04 10:28:00 gw01 systemd[1]: BAC_LOG event-241: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 10:28:37 app01 nginx[842]: BAC_LOG event-242: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 10:29:14 db01 postgres[1123]: BAC_LOG event-243: warning: CPU temperature high on core 3
+Mar 04 10:29:51 vpn01 cron[88]: BAC_LOG event-244: error: disk sda latency exceeded threshold
+Mar 04 10:30:28 node02 BAC_LOG[501]: BAC_LOG event-245: Started Daily Cleanup job
+Mar 04 10:31:05 gw01 sshd[221]: BAC_LOG event-246: notice: rotated /var/log/syslog
+Mar 04 10:31:42 app01 kernel: BAC_LOG event-247: debug: connection pool heartbeat OK
+Mar 04 10:32:19 db01 systemd[1]: BAC_LOG event-248: critical: database replication lag reached 12s
+Mar 04 10:32:56 vpn01 nginx[842]: BAC_LOG event-249: info: backup completed successfully
+Mar 04 10:33:33 node02 postgres[1123]: BAC_LOG event-250: alert: unusual login volume detected
+Mar 04 10:34:10 gw01 cron[88]: BAC_LOG event-251: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 10:34:47 app01 BAC_LOG[501]: BAC_LOG event-252: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 10:35:24 db01 sshd[221]: BAC_LOG event-253: warning: CPU temperature high on core 3
+Mar 04 10:36:01 vpn01 kernel: BAC_LOG event-254: error: disk sda latency exceeded threshold
+Mar 04 10:36:38 node02 systemd[1]: BAC_LOG event-255: Started Daily Cleanup job
+Mar 04 10:37:15 gw01 nginx[842]: BAC_LOG event-256: notice: rotated /var/log/syslog
+Mar 04 10:37:52 app01 postgres[1123]: BAC_LOG event-257: debug: connection pool heartbeat OK
+Mar 04 10:38:29 db01 cron[88]: BAC_LOG event-258: critical: database replication lag reached 12s
+Mar 04 10:39:06 vpn01 BAC_LOG[501]: BAC_LOG event-259: info: backup completed successfully
+Mar 04 10:39:43 node02 sshd[221]: BAC_LOG event-260: alert: unusual login volume detected
+Mar 04 10:40:20 gw01 kernel: BAC_LOG event-261: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 10:40:57 app01 systemd[1]: BAC_LOG event-262: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 10:41:34 db01 nginx[842]: BAC_LOG event-263: warning: CPU temperature high on core 3
+Mar 04 10:42:11 vpn01 postgres[1123]: BAC_LOG event-264: error: disk sda latency exceeded threshold
+Mar 04 10:42:48 node02 cron[88]: BAC_LOG event-265: Started Daily Cleanup job
+Mar 04 10:43:25 gw01 BAC_LOG[501]: BAC_LOG event-266: notice: rotated /var/log/syslog
+Mar 04 10:44:02 app01 sshd[221]: BAC_LOG event-267: debug: connection pool heartbeat OK
+Mar 04 10:44:39 db01 kernel: BAC_LOG event-268: critical: database replication lag reached 12s
+Mar 04 10:45:16 vpn01 systemd[1]: BAC_LOG event-269: info: backup completed successfully
+Mar 04 10:45:53 node02 nginx[842]: BAC_LOG event-270: alert: unusual login volume detected
+Mar 04 10:46:30 gw01 postgres[1123]: BAC_LOG event-271: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 10:47:07 app01 cron[88]: BAC_LOG event-272: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 10:47:44 db01 BAC_LOG[501]: BAC_LOG event-273: warning: CPU temperature high on core 3
+Mar 04 10:48:21 vpn01 sshd[221]: BAC_LOG event-274: error: disk sda latency exceeded threshold
+Mar 04 10:48:58 node02 kernel: BAC_LOG event-275: Started Daily Cleanup job
+Mar 04 10:49:35 gw01 systemd[1]: BAC_LOG event-276: notice: rotated /var/log/syslog
+Mar 04 10:50:12 app01 nginx[842]: BAC_LOG event-277: debug: connection pool heartbeat OK
+Mar 04 10:50:49 db01 postgres[1123]: BAC_LOG event-278: critical: database replication lag reached 12s
+Mar 04 10:51:26 vpn01 cron[88]: BAC_LOG event-279: info: backup completed successfully
+Mar 04 10:52:03 node02 BAC_LOG[501]: BAC_LOG event-280: alert: unusual login volume detected
+Mar 04 10:52:40 gw01 sshd[221]: BAC_LOG event-281: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 10:53:17 app01 kernel: BAC_LOG event-282: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 10:53:54 db01 systemd[1]: BAC_LOG event-283: warning: CPU temperature high on core 3
+Mar 04 10:54:31 vpn01 nginx[842]: BAC_LOG event-284: error: disk sda latency exceeded threshold
+Mar 04 10:55:08 node02 postgres[1123]: BAC_LOG event-285: Started Daily Cleanup job
+Mar 04 10:55:45 gw01 cron[88]: BAC_LOG event-286: notice: rotated /var/log/syslog
+Mar 04 10:56:22 app01 BAC_LOG[501]: BAC_LOG event-287: debug: connection pool heartbeat OK
+Mar 04 10:56:59 db01 sshd[221]: BAC_LOG event-288: critical: database replication lag reached 12s
+Mar 04 10:57:36 vpn01 kernel: BAC_LOG event-289: info: backup completed successfully
+Mar 04 10:58:13 node02 systemd[1]: BAC_LOG event-290: alert: unusual login volume detected
+Mar 04 10:58:50 gw01 nginx[842]: BAC_LOG event-291: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 10:59:27 app01 postgres[1123]: BAC_LOG event-292: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 11:00:04 db01 cron[88]: BAC_LOG event-293: warning: CPU temperature high on core 3
+Mar 04 11:00:41 vpn01 BAC_LOG[501]: BAC_LOG event-294: error: disk sda latency exceeded threshold
+Mar 04 11:01:18 node02 sshd[221]: BAC_LOG event-295: Started Daily Cleanup job
+Mar 04 11:01:55 gw01 kernel: BAC_LOG event-296: notice: rotated /var/log/syslog
+Mar 04 11:02:32 app01 systemd[1]: BAC_LOG event-297: debug: connection pool heartbeat OK
+Mar 04 11:03:09 db01 nginx[842]: BAC_LOG event-298: critical: database replication lag reached 12s
+Mar 04 11:03:46 vpn01 postgres[1123]: BAC_LOG event-299: info: backup completed successfully
+Mar 04 11:04:23 node02 cron[88]: BAC_LOG event-300: alert: unusual login volume detected
+Mar 04 11:05:00 gw01 BAC_LOG[501]: BAC_LOG event-301: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 11:05:37 app01 sshd[221]: BAC_LOG event-302: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 11:06:14 db01 kernel: BAC_LOG event-303: warning: CPU temperature high on core 3
+Mar 04 11:06:51 vpn01 systemd[1]: BAC_LOG event-304: error: disk sda latency exceeded threshold
+Mar 04 11:07:28 node02 nginx[842]: BAC_LOG event-305: Started Daily Cleanup job
+Mar 04 11:08:05 gw01 postgres[1123]: BAC_LOG event-306: notice: rotated /var/log/syslog
+Mar 04 11:08:42 app01 cron[88]: BAC_LOG event-307: debug: connection pool heartbeat OK
+Mar 04 11:09:19 db01 BAC_LOG[501]: BAC_LOG event-308: critical: database replication lag reached 12s
+Mar 04 11:09:56 vpn01 sshd[221]: BAC_LOG event-309: info: backup completed successfully
+Mar 04 11:10:33 node02 kernel: BAC_LOG event-310: alert: unusual login volume detected
+Mar 04 11:11:10 gw01 systemd[1]: BAC_LOG event-311: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 11:11:47 app01 nginx[842]: BAC_LOG event-312: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 11:12:24 db01 postgres[1123]: BAC_LOG event-313: warning: CPU temperature high on core 3
+Mar 04 11:13:01 vpn01 cron[88]: BAC_LOG event-314: error: disk sda latency exceeded threshold
+Mar 04 11:13:38 node02 BAC_LOG[501]: BAC_LOG event-315: Started Daily Cleanup job
+Mar 04 11:14:15 gw01 sshd[221]: BAC_LOG event-316: notice: rotated /var/log/syslog
+Mar 04 11:14:52 app01 kernel: BAC_LOG event-317: debug: connection pool heartbeat OK
+Mar 04 11:15:29 db01 systemd[1]: BAC_LOG event-318: critical: database replication lag reached 12s
+Mar 04 11:16:06 vpn01 nginx[842]: BAC_LOG event-319: info: backup completed successfully
+Mar 04 11:16:43 node02 postgres[1123]: BAC_LOG event-320: alert: unusual login volume detected
+Mar 04 11:17:20 gw01 cron[88]: BAC_LOG event-321: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 11:17:57 app01 BAC_LOG[501]: BAC_LOG event-322: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 11:18:34 db01 sshd[221]: BAC_LOG event-323: warning: CPU temperature high on core 3
+Mar 04 11:19:11 vpn01 kernel: BAC_LOG event-324: error: disk sda latency exceeded threshold
+Mar 04 11:19:48 node02 systemd[1]: BAC_LOG event-325: Started Daily Cleanup job
+Mar 04 11:20:25 gw01 nginx[842]: BAC_LOG event-326: notice: rotated /var/log/syslog
+Mar 04 11:21:02 app01 postgres[1123]: BAC_LOG event-327: debug: connection pool heartbeat OK
+Mar 04 11:21:39 db01 cron[88]: BAC_LOG event-328: critical: database replication lag reached 12s
+Mar 04 11:22:16 vpn01 BAC_LOG[501]: BAC_LOG event-329: info: backup completed successfully
+Mar 04 11:22:53 node02 sshd[221]: BAC_LOG event-330: alert: unusual login volume detected
+Mar 04 11:23:30 gw01 kernel: BAC_LOG event-331: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 11:24:07 app01 systemd[1]: BAC_LOG event-332: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 11:24:44 db01 nginx[842]: BAC_LOG event-333: warning: CPU temperature high on core 3
+Mar 04 11:25:21 vpn01 postgres[1123]: BAC_LOG event-334: error: disk sda latency exceeded threshold
+Mar 04 11:25:58 node02 cron[88]: BAC_LOG event-335: Started Daily Cleanup job
+Mar 04 11:26:35 gw01 BAC_LOG[501]: BAC_LOG event-336: notice: rotated /var/log/syslog
+Mar 04 11:27:12 app01 sshd[221]: BAC_LOG event-337: debug: connection pool heartbeat OK
+Mar 04 11:27:49 db01 kernel: BAC_LOG event-338: critical: database replication lag reached 12s
+Mar 04 11:28:26 vpn01 systemd[1]: BAC_LOG event-339: info: backup completed successfully
+Mar 04 11:29:03 node02 nginx[842]: BAC_LOG event-340: alert: unusual login volume detected
+Mar 04 11:29:40 gw01 postgres[1123]: BAC_LOG event-341: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 11:30:17 app01 cron[88]: BAC_LOG event-342: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 11:30:54 db01 BAC_LOG[501]: BAC_LOG event-343: warning: CPU temperature high on core 3
+Mar 04 11:31:31 vpn01 sshd[221]: BAC_LOG event-344: error: disk sda latency exceeded threshold
+Mar 04 11:32:08 node02 kernel: BAC_LOG event-345: Started Daily Cleanup job
+Mar 04 11:32:45 gw01 systemd[1]: BAC_LOG event-346: notice: rotated /var/log/syslog
+Mar 04 11:33:22 app01 nginx[842]: BAC_LOG event-347: debug: connection pool heartbeat OK
+Mar 04 11:33:59 db01 postgres[1123]: BAC_LOG event-348: critical: database replication lag reached 12s
+Mar 04 11:34:36 vpn01 cron[88]: BAC_LOG event-349: info: backup completed successfully
+Mar 04 11:35:13 node02 BAC_LOG[501]: BAC_LOG event-350: alert: unusual login volume detected
+Mar 04 11:35:50 gw01 sshd[221]: BAC_LOG event-351: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 11:36:27 app01 kernel: BAC_LOG event-352: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 11:37:04 db01 systemd[1]: BAC_LOG event-353: warning: CPU temperature high on core 3
+Mar 04 11:37:41 vpn01 nginx[842]: BAC_LOG event-354: error: disk sda latency exceeded threshold
+Mar 04 11:38:18 node02 postgres[1123]: BAC_LOG event-355: Started Daily Cleanup job
+Mar 04 11:38:55 gw01 cron[88]: BAC_LOG event-356: notice: rotated /var/log/syslog
+Mar 04 11:39:32 app01 BAC_LOG[501]: BAC_LOG event-357: debug: connection pool heartbeat OK
+Mar 04 11:40:09 db01 sshd[221]: BAC_LOG event-358: critical: database replication lag reached 12s
+Mar 04 11:40:46 vpn01 kernel: BAC_LOG event-359: info: backup completed successfully
+Mar 04 11:41:23 node02 systemd[1]: BAC_LOG event-360: alert: unusual login volume detected
+Mar 04 11:42:00 gw01 nginx[842]: BAC_LOG event-361: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 11:42:37 app01 postgres[1123]: BAC_LOG event-362: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 11:43:14 db01 cron[88]: BAC_LOG event-363: warning: CPU temperature high on core 3
+Mar 04 11:43:51 vpn01 BAC_LOG[501]: BAC_LOG event-364: error: disk sda latency exceeded threshold
+Mar 04 11:44:28 node02 sshd[221]: BAC_LOG event-365: Started Daily Cleanup job
+Mar 04 11:45:05 gw01 kernel: BAC_LOG event-366: notice: rotated /var/log/syslog
+Mar 04 11:45:42 app01 systemd[1]: BAC_LOG event-367: debug: connection pool heartbeat OK
+Mar 04 11:46:19 db01 nginx[842]: BAC_LOG event-368: critical: database replication lag reached 12s
+Mar 04 11:46:56 vpn01 postgres[1123]: BAC_LOG event-369: info: backup completed successfully
+Mar 04 11:47:33 node02 cron[88]: BAC_LOG event-370: alert: unusual login volume detected
+Mar 04 11:48:10 gw01 BAC_LOG[501]: BAC_LOG event-371: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 11:48:47 app01 sshd[221]: BAC_LOG event-372: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 11:49:24 db01 kernel: BAC_LOG event-373: warning: CPU temperature high on core 3
+Mar 04 11:50:01 vpn01 systemd[1]: BAC_LOG event-374: error: disk sda latency exceeded threshold
+Mar 04 11:50:38 node02 nginx[842]: BAC_LOG event-375: Started Daily Cleanup job
+Mar 04 11:51:15 gw01 postgres[1123]: BAC_LOG event-376: notice: rotated /var/log/syslog
+Mar 04 11:51:52 app01 cron[88]: BAC_LOG event-377: debug: connection pool heartbeat OK
+Mar 04 11:52:29 db01 BAC_LOG[501]: BAC_LOG event-378: critical: database replication lag reached 12s
+Mar 04 11:53:06 vpn01 sshd[221]: BAC_LOG event-379: info: backup completed successfully
+Mar 04 11:53:43 node02 kernel: BAC_LOG event-380: alert: unusual login volume detected
+Mar 04 11:54:20 gw01 systemd[1]: BAC_LOG event-381: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 11:54:57 app01 nginx[842]: BAC_LOG event-382: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 11:55:34 db01 postgres[1123]: BAC_LOG event-383: warning: CPU temperature high on core 3
+Mar 04 11:56:11 vpn01 cron[88]: BAC_LOG event-384: error: disk sda latency exceeded threshold
+Mar 04 11:56:48 node02 BAC_LOG[501]: BAC_LOG event-385: Started Daily Cleanup job
+Mar 04 11:57:25 gw01 sshd[221]: BAC_LOG event-386: notice: rotated /var/log/syslog
+Mar 04 11:58:02 app01 kernel: BAC_LOG event-387: debug: connection pool heartbeat OK
+Mar 04 11:58:39 db01 systemd[1]: BAC_LOG event-388: critical: database replication lag reached 12s
+Mar 04 11:59:16 vpn01 nginx[842]: BAC_LOG event-389: info: backup completed successfully
+Mar 04 11:59:53 node02 postgres[1123]: BAC_LOG event-390: alert: unusual login volume detected
+Mar 04 12:00:30 gw01 cron[88]: BAC_LOG event-391: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 12:01:07 app01 BAC_LOG[501]: BAC_LOG event-392: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 12:01:44 db01 sshd[221]: BAC_LOG event-393: warning: CPU temperature high on core 3
+Mar 04 12:02:21 vpn01 kernel: BAC_LOG event-394: error: disk sda latency exceeded threshold
+Mar 04 12:02:58 node02 systemd[1]: BAC_LOG event-395: Started Daily Cleanup job
+Mar 04 12:03:35 gw01 nginx[842]: BAC_LOG event-396: notice: rotated /var/log/syslog
+Mar 04 12:04:12 app01 postgres[1123]: BAC_LOG event-397: debug: connection pool heartbeat OK
+Mar 04 12:04:49 db01 cron[88]: BAC_LOG event-398: critical: database replication lag reached 12s
+Mar 04 12:05:26 vpn01 BAC_LOG[501]: BAC_LOG event-399: info: backup completed successfully
+Mar 04 12:06:03 node02 sshd[221]: BAC_LOG event-400: alert: unusual login volume detected
+Mar 04 12:06:40 gw01 kernel: BAC_LOG event-401: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 12:07:17 app01 systemd[1]: BAC_LOG event-402: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 12:07:54 db01 nginx[842]: BAC_LOG event-403: warning: CPU temperature high on core 3
+Mar 04 12:08:31 vpn01 postgres[1123]: BAC_LOG event-404: error: disk sda latency exceeded threshold
+Mar 04 12:09:08 node02 cron[88]: BAC_LOG event-405: Started Daily Cleanup job
+Mar 04 12:09:45 gw01 BAC_LOG[501]: BAC_LOG event-406: notice: rotated /var/log/syslog
+Mar 04 12:10:22 app01 sshd[221]: BAC_LOG event-407: debug: connection pool heartbeat OK
+Mar 04 12:10:59 db01 kernel: BAC_LOG event-408: critical: database replication lag reached 12s
+Mar 04 12:11:36 vpn01 systemd[1]: BAC_LOG event-409: info: backup completed successfully
+Mar 04 12:12:13 node02 nginx[842]: BAC_LOG event-410: alert: unusual login volume detected
+Mar 04 12:12:50 gw01 postgres[1123]: BAC_LOG event-411: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 12:13:27 app01 cron[88]: BAC_LOG event-412: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 12:14:04 db01 BAC_LOG[501]: BAC_LOG event-413: warning: CPU temperature high on core 3
+Mar 04 12:14:41 vpn01 sshd[221]: BAC_LOG event-414: error: disk sda latency exceeded threshold
+Mar 04 12:15:18 node02 kernel: BAC_LOG event-415: Started Daily Cleanup job
+Mar 04 12:15:55 gw01 systemd[1]: BAC_LOG event-416: notice: rotated /var/log/syslog
+Mar 04 12:16:32 app01 nginx[842]: BAC_LOG event-417: debug: connection pool heartbeat OK
+Mar 04 12:17:09 db01 postgres[1123]: BAC_LOG event-418: critical: database replication lag reached 12s
+Mar 04 12:17:46 vpn01 cron[88]: BAC_LOG event-419: info: backup completed successfully
+Mar 04 12:18:23 node02 BAC_LOG[501]: BAC_LOG event-420: alert: unusual login volume detected
+Mar 04 12:19:00 gw01 sshd[221]: BAC_LOG event-421: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 12:19:37 app01 kernel: BAC_LOG event-422: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 12:20:14 db01 systemd[1]: BAC_LOG event-423: warning: CPU temperature high on core 3
+Mar 04 12:20:51 vpn01 nginx[842]: BAC_LOG event-424: error: disk sda latency exceeded threshold
+Mar 04 12:21:28 node02 postgres[1123]: BAC_LOG event-425: Started Daily Cleanup job
+Mar 04 12:22:05 gw01 cron[88]: BAC_LOG event-426: notice: rotated /var/log/syslog
+Mar 04 12:22:42 app01 BAC_LOG[501]: BAC_LOG event-427: debug: connection pool heartbeat OK
+Mar 04 12:23:19 db01 sshd[221]: BAC_LOG event-428: critical: database replication lag reached 12s
+Mar 04 12:23:56 vpn01 kernel: BAC_LOG event-429: info: backup completed successfully
+Mar 04 12:24:33 node02 systemd[1]: BAC_LOG event-430: alert: unusual login volume detected
+Mar 04 12:25:10 gw01 nginx[842]: BAC_LOG event-431: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 12:25:47 app01 postgres[1123]: BAC_LOG event-432: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 12:26:24 db01 cron[88]: BAC_LOG event-433: warning: CPU temperature high on core 3
+Mar 04 12:27:01 vpn01 BAC_LOG[501]: BAC_LOG event-434: error: disk sda latency exceeded threshold
+Mar 04 12:27:38 node02 sshd[221]: BAC_LOG event-435: Started Daily Cleanup job
+Mar 04 12:28:15 gw01 kernel: BAC_LOG event-436: notice: rotated /var/log/syslog
+Mar 04 12:28:52 app01 systemd[1]: BAC_LOG event-437: debug: connection pool heartbeat OK
+Mar 04 12:29:29 db01 nginx[842]: BAC_LOG event-438: critical: database replication lag reached 12s
+Mar 04 12:30:06 vpn01 postgres[1123]: BAC_LOG event-439: info: backup completed successfully
+Mar 04 12:30:43 node02 cron[88]: BAC_LOG event-440: alert: unusual login volume detected
+Mar 04 12:31:20 gw01 BAC_LOG[501]: BAC_LOG event-441: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 12:31:57 app01 sshd[221]: BAC_LOG event-442: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 12:32:34 db01 kernel: BAC_LOG event-443: warning: CPU temperature high on core 3
+Mar 04 12:33:11 vpn01 systemd[1]: BAC_LOG event-444: error: disk sda latency exceeded threshold
+Mar 04 12:33:48 node02 nginx[842]: BAC_LOG event-445: Started Daily Cleanup job
+Mar 04 12:34:25 gw01 postgres[1123]: BAC_LOG event-446: notice: rotated /var/log/syslog
+Mar 04 12:35:02 app01 cron[88]: BAC_LOG event-447: debug: connection pool heartbeat OK
+Mar 04 12:35:39 db01 BAC_LOG[501]: BAC_LOG event-448: critical: database replication lag reached 12s
+Mar 04 12:36:16 vpn01 sshd[221]: BAC_LOG event-449: info: backup completed successfully
+Mar 04 12:36:53 node02 kernel: BAC_LOG event-450: alert: unusual login volume detected
+Mar 04 12:37:30 gw01 systemd[1]: BAC_LOG event-451: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 12:38:07 app01 nginx[842]: BAC_LOG event-452: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 12:38:44 db01 postgres[1123]: BAC_LOG event-453: warning: CPU temperature high on core 3
+Mar 04 12:39:21 vpn01 cron[88]: BAC_LOG event-454: error: disk sda latency exceeded threshold
+Mar 04 12:39:58 node02 BAC_LOG[501]: BAC_LOG event-455: Started Daily Cleanup job
+Mar 04 12:40:35 gw01 sshd[221]: BAC_LOG event-456: notice: rotated /var/log/syslog
+Mar 04 12:41:12 app01 kernel: BAC_LOG event-457: debug: connection pool heartbeat OK
+Mar 04 12:41:49 db01 systemd[1]: BAC_LOG event-458: critical: database replication lag reached 12s
+Mar 04 12:42:26 vpn01 nginx[842]: BAC_LOG event-459: info: backup completed successfully
+Mar 04 12:43:03 node02 postgres[1123]: BAC_LOG event-460: alert: unusual login volume detected
+Mar 04 12:43:40 gw01 cron[88]: BAC_LOG event-461: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 12:44:17 app01 BAC_LOG[501]: BAC_LOG event-462: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 12:44:54 db01 sshd[221]: BAC_LOG event-463: warning: CPU temperature high on core 3
+Mar 04 12:45:31 vpn01 kernel: BAC_LOG event-464: error: disk sda latency exceeded threshold
+Mar 04 12:46:08 node02 systemd[1]: BAC_LOG event-465: Started Daily Cleanup job
+Mar 04 12:46:45 gw01 nginx[842]: BAC_LOG event-466: notice: rotated /var/log/syslog
+Mar 04 12:47:22 app01 postgres[1123]: BAC_LOG event-467: debug: connection pool heartbeat OK
+Mar 04 12:47:59 db01 cron[88]: BAC_LOG event-468: critical: database replication lag reached 12s
+Mar 04 12:48:36 vpn01 BAC_LOG[501]: BAC_LOG event-469: info: backup completed successfully
+Mar 04 12:49:13 node02 sshd[221]: BAC_LOG event-470: alert: unusual login volume detected
+Mar 04 12:49:50 gw01 kernel: BAC_LOG event-471: Accepted publickey for admin from 10.1.2.3 port 55221 ssh2
+Mar 04 12:50:27 app01 systemd[1]: BAC_LOG event-472: Failed password for invalid user root from 185.13.22.9 port 49322 ssh2
+Mar 04 12:51:04 db01 nginx[842]: BAC_LOG event-473: warning: CPU temperature high on core 3
+Mar 04 12:51:41 vpn01 postgres[1123]: BAC_LOG event-474: error: disk sda latency exceeded threshold
+Mar 04 12:52:18 node02 cron[88]: BAC_LOG event-475: Started Daily Cleanup job
+Mar 04 12:52:55 gw01 BAC_LOG[501]: BAC_LOG event-476: notice: rotated /var/log/syslog
+Mar 04 12:53:32 app01 sshd[221]: BAC_LOG event-477: debug: connection pool heartbeat OK
+Mar 04 12:54:09 db01 kernel: BAC_LOG event-478: critical: database replication lag reached 12s
+Mar 04 12:54:46 vpn01 systemd[1]: BAC_LOG event-479: info: backup completed successfully
+Mar 04 12:55:23 node02 nginx[842]: BAC_LOG event-480: alert: unusual login volume detected
