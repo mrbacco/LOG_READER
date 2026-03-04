@@ -18,10 +18,11 @@ import argparse
 import datetime as dt
 import html
 import logging
+import mimetypes
 import pathlib
 from collections import Counter
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import parse_qs
+from urllib.parse import parse_qs, unquote
 
 from syslog_reader import LOG_TYPE_CHOICES, LEVEL_HINTS, parse_datetime, parse_line, should_keep
 
@@ -232,30 +233,67 @@ class SyslogWebHandler(BaseHTTPRequestHandler):
     def _send_html(self, content: bytes, status_code: int = 200) -> None:
         self._send_bytes(content, "text/html; charset=utf-8", status_code=status_code)
 
-    def _send_css(self, status_code: int = 200) -> None:
-        # Serve CSS from a dedicated static path.
-        css_path = STATIC_DIR / "styles.css"
-        css_text = _load_text(css_path)
-        if css_text is None:
-            self._send_html(_render_page(errors=[f"Missing CSS file: {css_path}"]), status_code=500)
-            return
-        self._send_bytes(css_text.encode("utf-8"), "text/css; charset=utf-8", status_code=status_code)
+    def _send_text(self, text: str, status_code: int = 200, content_type: str = "text/plain; charset=utf-8") -> None:
+        self._send_bytes(text.encode("utf-8"), content_type, status_code=status_code)
+
+    def _send_empty(self, status_code: int = 204, content_type: str = "text/plain; charset=utf-8") -> None:
+        self._send_bytes(b"", content_type, status_code=status_code)
+
+    def _send_static(self, route: str) -> bool:
+        # Generic static file serving for paths under /static/.
+        if not route.startswith("/static/"):
+            return False
+
+        relative = unquote(route[len("/static/") :]).strip("/")
+        if not relative:
+            self._send_html(_render_page(errors=["Not found."]), status_code=404)
+            return True
+
+        base = STATIC_DIR.resolve()
+        target = (STATIC_DIR / relative).resolve()
+        if base not in target.parents and target != base:
+            self._send_html(_render_page(errors=["Not found."]), status_code=404)
+            return True
+
+        if not target.exists() or not target.is_file():
+            self._send_html(_render_page(errors=["Not found."]), status_code=404)
+            return True
+
+        content = target.read_bytes()
+        guessed = mimetypes.guess_type(str(target))[0] or "application/octet-stream"
+        if guessed.startswith("text/"):
+            guessed = f"{guessed}; charset=utf-8"
+        self._send_bytes(content, guessed, status_code=200)
+        return True
 
     def do_GET(self) -> None:  # noqa: N802
         route = self.path.split("?", 1)[0]
         LOGGER.debug("GET route=%s", route)
-        if route == "/":
+        if route in ("/", "/index.html"):
             self._send_html(_render_page())
             return
-        if route == "/static/styles.css":
-            self._send_css()
+        if route == "/health":
+            self._send_text("ok\n")
+            return
+        if route == "/robots.txt":
+            self._send_text("User-agent: *\nAllow: /\n")
+            return
+        if route == "/favicon.ico":
+            # Avoid noisy 404 logs if favicon is missing.
+            favicon = STATIC_DIR / "favicon.ico"
+            if favicon.exists() and favicon.is_file():
+                self._send_bytes(favicon.read_bytes(), "image/x-icon", status_code=200)
+            else:
+                self._send_empty(status_code=204, content_type="image/x-icon")
+            return
+        if self._send_static(route):
             return
         self._send_html(_render_page(errors=["Not found."]), status_code=404)
 
     def do_POST(self) -> None:  # noqa: N802
         route = self.path.split("?", 1)[0]
         LOGGER.debug("POST route=%s", route)
-        if route != "/":
+        if route not in ("/", "/index.html"):
             self._send_html(_render_page(errors=["Not found."]), status_code=404)
             return
 
