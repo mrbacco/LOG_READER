@@ -53,6 +53,11 @@ form {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: start;
+}
+
+.row > label {
+  min-width: 0;
 }
 
 label {
@@ -70,6 +75,9 @@ button {
   border-radius: 8px;
   padding: 8px 10px;
   background: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
 }
 
 textarea {
@@ -87,6 +95,10 @@ button {
   cursor: pointer;
   width: fit-content;
   padding: 9px 18px;
+}
+
+input[type="file"] {
+  max-width: 100%;
 }
 
 .errors {
